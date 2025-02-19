@@ -7,14 +7,16 @@ import Task from './component/task.jsx';
 
 import Login from './component/login.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router';
+import Register from './component/register.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   <BrowserRouter>
      <Routes>
-       <Route path="/login" element={<Login />} />
-       <Route path="/" element={<App />} />
+       <Route path="/" element={<Login />} />
+       <Route path="/home" element={<App />} />
        <Route path="/task" element={<Task />} />
+       <Route path="/register" element={<Register />} />
        
      </Routes>
    </BrowserRouter>

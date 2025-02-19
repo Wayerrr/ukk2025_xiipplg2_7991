@@ -6,12 +6,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { GoInbox } from "react-icons/go";
 import { BiAddToQueue } from "react-icons/bi";
+import { Link } from 'react-router';
 
 function NavbarEnchance() {
   return (
     <Navbar bg="secondary" data-bs-theme="success">
       <Container fluid>
-        <Navbar.Brand href="#">ToDO</Navbar.Brand>
+        <Navbar.Brand href="/home">ToDO</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -36,9 +37,11 @@ function NavbarEnchance() {
               type="search"
               placeholder="Search"
               className="me-2"
-              aria-label="Search"
+              aria-label="Logout"
             />
-            <Button variant="outline-light">Search</Button>
+            <Link to='/'>
+          <Button variant="outline-light">LOGOut</Button>
+          </Link>
           </Form>
         </Navbar.Collapse>
       </Container>

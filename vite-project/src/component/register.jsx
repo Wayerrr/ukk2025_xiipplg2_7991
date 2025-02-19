@@ -2,7 +2,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router';
 
-function Login() {
+function Register() {
   return (
     <div
       style={{
@@ -16,9 +16,17 @@ function Login() {
         <div>
           <h2 style={{
             marginBottom:"1rem"
-          }}>LOGiN</h2>
+          }}>ReGISTER</h2>
         </div>
         <Form>
+        <Form.Floating className="mb-3">
+            <Form.Control
+              id="floatingInputCustom"
+              type="name"
+              placeholder="name"
+            />
+            <label htmlFor="floatingInputCustom">Name</label>
+          </Form.Floating>
           <Form.Floating className="mb-3">
             <Form.Control
               id="floatingInputCustom"
@@ -36,10 +44,7 @@ function Login() {
             <label htmlFor="floatingPasswordCustom">Password</label>
           </Form.Floating>
           <Link to={'/home'}>
-          <Button variant="secondary" as="input" type="submit" value="Submit" className="w-100" />
-          </Link>
-          <Link to={'/register'}>
-          Belum punya akun? Regist disini!
+          <Button variant="success" as="input" type="submit" value="Submit" className="w-100" />
           </Link>
         </Form>
       </div>
@@ -47,4 +52,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;
