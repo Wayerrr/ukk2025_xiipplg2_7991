@@ -4,6 +4,7 @@ import './index.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import App from './App.jsx';
 import Task from './component/task.jsx';
+import ProfileCard from './component/profil.jsx';
 
 import Login from './component/login.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router';
@@ -17,7 +18,7 @@ createRoot(document.getElementById('root')).render(
        <Route path="/home" element={<App />} />
        <Route path="/task" element={<Task />} />
        <Route path="/register" element={<Register />} />
-       
+       <Route path="/profil" element={<ProfileCard />} />
      </Routes>
    </BrowserRouter>
   </StrictMode>,
